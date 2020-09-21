@@ -1,178 +1,200 @@
 
-
+<?php
+  include("conexion.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-</head>
-<style type="text/css">
 
-body{
-	background: url(fondo.jpg);
-	background-attachment: fixed;
-	background-size: cover;
-	background-repeat: none;
-}
-.us, .contenedor{
-    width: 300%;
-}
-.us, .contenedor, .prov{
-    background-color: rgba(0,0,0,.7);
-    color: white;
-    font-family: 'Maven Pro';
-    width: 50%;
-    padding: 20px;
-    border-radius: 10px;
-}
+  <head>
 
-
-
-input[type="text"]{
-	border: 0px;
-	padding: 5px;
-	border-radius: 5px;
-	margin-bottom: 5px;
-	border-bottom: 5px solid #173D3A;
-	margin-top: 7px;
-}
-
-h1{
-	font-family: Arial;
-	font-size: 30px;
-}
-
-
-
-
-.header{
-	background-color: #173D3A;
-	color: white;
-	border-radius: 10px;
-}
-
-td{
-	padding: 10px;
-}
-
-tr{
-	border-bottom:4px solid #173D3A;
-}
-
-tr:hover{
-	background-color: #6E91CB;
-	color: white;
-	transition: .5s;
-}
-
-input[type="submit"], input[type="reset"]{
-  border: 0px solid #797878; 
-  padding: 10px;
-  border-radius: 10px;
-  background-color: silver;
-
-}
-
-	
-
-</style>
-<style type="text/css">
-    
-    *{
-        padding: 0;
-        margin: 0;
-    }
-    p{
-        margin-bottom: 20px;
-    }
-    header{
-        padding-left: 350px;
-        background: rgba(0,0,0,0.9);
-        width: 100%;
-        position: fixed;
-        z-index: 100;
-    }
-    nav{
-        float:left;
-    }
-
-    nav ul{
-        list-style: none;
-        overflow: hidden;
-    }
-    nav ul li{
-        float: left;
-        font-family: arial,sans-serief;
-        font-size: 16px;
-    }
-    nav ul li a{
-        display: block;
-        padding: 20px;
-        color: #fff;
-        text-decoration: none;
-
-    }
-    nav ul li:hover{
-        background: #3ead47;
-    }
-    .contenido{
-        padding-top: 80px;
-    }
-    .wrapper{
-        width: 80px%;
-        margin: auto;
-        overflow: hidden;
-    }
-</style>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Tutoriales</a></li>
-                <li><a href="#">Cursos</a></li>
-                <li><a href="#">Preguntame algo</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section class="contenido wrapper">
-        <p>
-
-	<center>
-	
-	 <br>
-    
-    <div class="prov">
-    	<h1>Un sueño que se lleva en la sangre</h1>
-        <img src="logo.png">
-
-    	
-    		
-    	
-    </div> <br>
-
-
-     <div class="contenedor">
-        <h1>Conocenos</h1>
-        <img src="afiche.png" width="300" height="450">
-        <img src="afiche2.png" width="300">
-        <form action="producto.php" method="POST">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
    
-        </form>
-    </div><br>
-      <div class="contenedor">
-        <h1>Tu Buscador</h1>
-        <form action="" method="POST">
-            <label for="" class="tx"></label><br><input type="text" name="nombre_p" placeholder="Digite.."><br>
-            <input type="submit" value="Buscar">
+    <meta name="author" content="">
+
+    <title>InBike</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/creative.min.css" rel="stylesheet">
+
+    <!-- modal -->
+      <link rel="stylesheet" type="text/css" href="login/css/util.css">
+
+    
+
+  </head>
+ 
+    
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top" style="color:black; ">InBike </a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">Mision y Vision</a>
+            </li>
+      
+       
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Contactos</a>
+            </li>
+            <li class="nav-item">
+           
+
+            </li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </nav>
+    <header class="masthead text-center text-white d-flex">
+
+      <div class="container my-auto">
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <h1 class="text-uppercase">
+              <strong style="color: black;"> Ciclopatas de corazón </strong>
+            </h1>
+            <hr>
+          </div>
+          <div class="col-lg-8 mx-auto">
+            <p class="text-faded mb-5" style="color: black;">Brindando lo necesario en ciclas !</p>
+            <div class="container">
+
+              <form action="registrar.php" method="POST" class="btn btn-primary btn-xl js-scroll-trigger"  data-toggle="modal" data-target="#myModal">
+                <button>Registrate</button>
+                
+              </form>
+            </div><br>
+
+              <div class="container">
+
+                           <form action="contraseña.php" method="POST" class="btn btn-primary btn-xl js-scroll-trigger"  data-toggle="modal" data-target="#myModal">
+                <button>Ingresar</button>
+                
+              </form>
+              </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="bg-primary" id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+
+
+
+            <h2 class="section-heading text-white">Mision</h2>
+            <hr class="light my-4">
+            <p class="text-faded mb-4">Somos una pagina comprometida con el deporte, la salud, el cuidado y nuestra amiga la bicicleta por lo tanto en esta pagina podrás encontrar guías, rutas , consejos que serán de vital importancia a la hora de emprender con el caballito de acero así que sigue tu camino con InBike y que la aventura comience la aventura.</p>
+
+            <h2 class="section-heading text-white">vision</h2>
+            <hr class="light my-4">
+            <p class="text-faded mb-4">Somos un grupo de cuatro de jóvenes emprendedores que desde la niñez hemos estado involucrados en un ambiente de ciclas por lo tanto hemos capturado las necesidades que hoy en día no han sido suplidas en este contagioso ambiente por lo que conocemos el campo y queremos lo mejor para el campo.</p>
             
-        </form>
-    </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-</center>
-</p>
 
-   </section>
-</body>
+
+    
+
+ 
+
+    <section id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading">Contactanos</h2>
+            <hr class="my-4">
+            <p class="mb-5">Si aun tienes dudas comunicate con nosotros </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 ml-auto text-center">
+            <i class="fa fa-phone fa-3x mb-3 sr-contact"></i>
+            <p>300 345 6276</p>
+            <p>310 723 5463</p>
+            <p>322 412 6734</p>
+            <p>305 511 6773</p>
+          </div>
+          <div class="col-lg-4 mr-auto text-center">
+            <i class="fa fa-envelope-o fa-3x mb-3 sr-contact"></i>
+            <p>
+              <a href="#">Inbikecolombia@hotmail.com</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/creative.min.js"></script>
+
+    <script src="login/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+  <script src="login/vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+  <script src="login/vendor/bootstrap/js/popper.js"></script>
+  <script src="login/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+  <script src="login/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+  <script src="login/vendor/daterangepicker/moment.min.js"></script>
+  <script src="login/vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+  <script src="login/vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+  <script src="login/js/main.js"></script>
+
+
+ 
+
+ 
+
+
+  </body>
+
 </html>
+
+
+<?php
+    $correo=$_POST["correo"];
+    $usuario=$_POST["usuario"];
+    $contrasena=$_POST["contrasena"];
+    $resultado="INSERT INTO login(usuario, contrasena, correo) VALUES ('$usuario', '$contrasena','$correo')";
+    $res=mysqli_query($conexion, $resultado);
+?>
